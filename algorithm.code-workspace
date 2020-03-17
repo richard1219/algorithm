@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "C:\\kunzhong\\code\\algorithm"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.tcc": "cpp",
+			"random": "cpp",
+			"coroutine": "cpp",
+			"map": "cpp",
+			"unordered_map": "cpp"
+		}
+	}
+}
