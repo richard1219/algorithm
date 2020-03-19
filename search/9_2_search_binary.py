@@ -1,7 +1,7 @@
 '''
  $Revision: 1.0 $
  $Author: kunzhong $
- $Date: 2020/03/16 $
+ $Date: 2020/03 $
 '''
 
 import time
