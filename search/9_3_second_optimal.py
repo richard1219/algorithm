@@ -23,15 +23,16 @@ class BinaryTree(object):
         self.right_child = None
   
 
-#构建次优查找树
+#构建次优查找树，经典递归调用
 #@array index start from 1
 #@low start from 1
 def second_optimal(bi_tree, array, sw, low, high):
     dw = sw[high] + sw[low - 1]
-    min_p = abs(dw - sw[low] - sw[low -1])
+    min_p = abs(dw - sw[low] - sw[low -1]) #min = abs(sw[high] - sw[low])
     target_i = low
-    j = low
+    j = low + 1
 
+    #找最小的P
     while j < high:
         p = abs(dw - sw[j] - sw[j -1])
         if p < min_p:
