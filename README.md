@@ -1,1 +1,1 @@
-# algorithmPython实现各种常用算法
+Python实现各种常用算法
