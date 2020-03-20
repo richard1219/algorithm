@@ -17,6 +17,8 @@ import os
 import math
 
 #二分查找法
+#@array 要查找的数组
+#@key 要查找的关键字
 def search_binary(array, key):
     i_start = 0
     i_end = len(array) - 1

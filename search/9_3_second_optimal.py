@@ -16,6 +16,7 @@ import sys
 import os
 import math
 
+#二叉树定义
 class BinaryTree(object):
     def __init__(self):
         self.data = None
@@ -24,8 +25,12 @@ class BinaryTree(object):
   
 
 #构建次优查找树，经典递归调用
+#@bi_tree 二叉树
 #@array index start from 1
+#@sw 经过计算的sw列表
 #@low start from 1
+#@high 队尾索引
+#
 def second_optimal(bi_tree, array, sw, low, high):
     dw = sw[high] + sw[low - 1]
     min_p = abs(dw - sw[low] - sw[low -1]) #min = abs(sw[high] - sw[low])
