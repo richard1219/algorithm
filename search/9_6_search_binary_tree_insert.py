@@ -78,7 +78,7 @@ if __name__ == '__main__':
 
     #构造一颗二叉排序树
     bi_tree = BinaryTree()
-    build_binary_tree(bi_tree, [1, 2, 3, 4, 5, 6, 7, 8], 0, 7)
+    build_binary_tree(bi_tree, [10, 20, 30, 40, 50, 60, 70, 80], 0, 7)
 
     insert_binary_tree(bi_tree, 0)
     #quit
