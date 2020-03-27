@@ -33,7 +33,7 @@ def insert_sort(array):
 
 if __name__ == '__main__':
 
-    array = [10, 20, 80, 70, 60, 90]
+    array = [50, 10, 20, 80, 70, 60, 90, 30]
     insert_sort(array)
     print(array)
 

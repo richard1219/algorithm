@@ -58,7 +58,7 @@ def quick_sort(array, low, high):
 
 if __name__ == '__main__':
 
-    array = [10, 20, 80, 70, 60, 90]
+    array = [50, 10, 20, 80, 70, 60, 90, 30]
     #bubble_sort(array)
     quick_sort(array, 0, len(array) - 1)
     print(array)
