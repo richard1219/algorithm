@@ -35,7 +35,7 @@ def simple_selection_sort(array):
 
 #heap adjust
 #@array starts from 1
-#构造大顶堆
+#构造大顶堆，从堆顶开始进行调整
 def heap_adjust(array, s, m):
     peak = array[s]
     j = 2*s
