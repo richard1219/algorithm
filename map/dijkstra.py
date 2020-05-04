@@ -16,7 +16,7 @@ import sys
 import os
 import math
 
-
+#参考：https://houbb.github.io/2020/01/23/data-struct-learn-03-graph-dijkstra
 #算法很容易，松弛算法为何奏效需要证明
 def dijkstra():
     v_name = ['A', 'B', 'C', 'D', 'E']

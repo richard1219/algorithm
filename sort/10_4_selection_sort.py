@@ -33,8 +33,12 @@ def simple_selection_sort(array):
 
     return
 
+#堆排序是一种树型选择排序，是对常规树型选择排序的改进
+#堆的翻译也很传神，完全二叉树，非终端节点不大于或小于左右孩子节点，形象的组成了一堆
 #heap adjust
 #@array starts from 1
+#@s 开始构造的序号
+#@m 结束构造的序号
 #构造大顶堆，从堆顶开始进行调整
 def heap_adjust(array, s, m):
     peak = array[s]
