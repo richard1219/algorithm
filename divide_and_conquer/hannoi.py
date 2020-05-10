@@ -32,6 +32,7 @@ def hannoi(n, A, B, C):
 
     return
 
+
 if __name__ == '__main__':
     A = []
     B = []

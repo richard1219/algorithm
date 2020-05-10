@@ -37,11 +37,30 @@ def search_binary(array, key):
     
     print("no mached key, compare times: %d" % counter)
     return
-        
+
+#用递归法重写一遍
+#start: 查找起始序号
+#end: 结束序号
+def search_binary2(array, start, end, key):
+    mid = int((start + end) / 2)
+
+    if (start > end): #要注意这个递归退出条件，否则死循环错误
+        print("not found")
+    elif array[mid] == key:
+        print("find key at %d" % mid)
+    elif array[mid] > key:
+        search_binary2(array, start, mid - 1, key)
+    elif array[mid] < key:
+        search_binary2(array, mid + 1, end, key)
+
+    return
 
 if __name__ == '__main__':
 
-    search_binary([1,2, 3, 4, 5], 6)
+    arr = [10, 20, 30, 40, 50, 70]
+    search_binary(arr, 26)
+
+    search_binary2(arr, 0, len(arr) - 1, 6)
     #quit
     print("Quit successfull");
 
