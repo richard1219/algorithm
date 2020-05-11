@@ -21,6 +21,76 @@ import base64
 #解几道笔试题吧
 #参考：https://zhuanlan.zhihu.com/p/79957598
 
+#红人
+class Pair(object):
+    def __init__(self):
+        self.x = None
+        self.y = None
+
+def DFS(red, watcher, watcher_queue, N, visited, pairs):
+    for pair in pairs:
+        if red == pair.x: #自己关注了谁排除
+            continue
+        if watcher != N[pair.x]:
+            continue
+
+        if N[pair.y] == red:
+            visited[pair.x] = 1
+            for w in watcher_queue:
+                visited[w] = 1
+            watcher_queue = []
+        else:
+            if visited[pair.y] == 1:
+                visited[pair.x] = 1
+                for w in watcher_queue:
+                    visited[w] = 1
+                watcher_queue= []
+                break
+            watcher_queue.append(pair.x)
+            DFS(red, N[pair.y], watcher_queue, N, visited, pairs)
+
+    watcher_queue= []
+    return
+
+def find_red():
+    N = ['A', 'B', 'C', 'D', 'E']
+    visited = [0, 0, 0, 0, 0]
+    watcher_queue = []
+    pairs = []
+
+    p = Pair()
+    p.x = 1
+    p.y = 0
+    pairs.append(p)
+
+    p4 = Pair()
+    p4.x = 4
+    p4.y = 3
+    pairs.append(p4)
+
+    p3 = Pair()
+    p3.x = 3
+    p3.y = 2
+    pairs.append(p3)
+
+    p2 = Pair()
+    p2.x = 2
+    p2.y = 1
+    pairs.append(p2)
+
+    p5 = Pair()
+    p5.x = 0
+    p5.y = 1
+    pairs.append(p5)
+
+    for i in range(len(N)):
+        if N[i] != 'A' and visited[i] != 1:
+            DFS('A', N[i], watcher_queue, N, visited, pairs)
+
+    for v in visited:
+        print(v)
+
+
 #ip还原问题
 #写出一个大意，解题思路写出来了，没空写出全部限制条件
 #用回溯试探法，逐点，逐一列举每个点可能的位置，将子串作为下个点的原串，最多递归4层即可解出全部
@@ -180,6 +250,7 @@ if __name__ == '__main__':
     buy_coin(n, m, coins, 0, 0, 0)
     print (max_grade)
     
+    find_red()
 
     #quit
     print("Quit successfull");
