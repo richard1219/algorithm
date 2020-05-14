@@ -24,7 +24,8 @@ class Tree(object):
         self.data = 0
         self.lchild = None
         self.rchild = None
-        
+
+#DFS，借助栈     
 #非递归方式，先序遍历了一颗二叉树，开胃菜
 def traverse_no_recursive(T):
     stack = [] #用个栈保存未访问的右孩子，完美
@@ -54,6 +55,8 @@ def traverse_front(T):
             traverse_front(T.rchild)
     return
 
+#BFS
+#借助队列
 def traverse_layer(T):
     stack = []
     if T != None:
