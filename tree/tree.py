@@ -19,7 +19,6 @@ import zlib
 import base64
 
 
-
 class Tree(object):
     def __int__(self):
         self.data = 0
@@ -55,6 +54,19 @@ def traverse_front(T):
             traverse_front(T.rchild)
     return
 
+def traverse_layer(T):
+    stack = []
+    if T != None:
+        stack.append(T)
+        for node in stack:
+            print(node.data)
+            if node.lchild != None:
+                stack.append(node.lchild)
+        
+            if node.rchild != None:
+                stack.append(node.rchild)
+    
+
 def traverse_test():
     t5 = Tree()
     t5.data = 5
@@ -84,6 +96,9 @@ def traverse_test():
     traverse_no_recursive(t1)
     print("recursive:")
     traverse_front(t1)
+
+    print("layer:")
+    traverse_layer(t1)
 
 
 
