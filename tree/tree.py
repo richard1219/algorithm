@@ -18,6 +18,7 @@ import math
 import zlib
 import base64
 
+#深度优先一般是解决连通性问题，而广度优先一般是解决最短路径问题
 
 class Tree(object):
     def __int__(self):
