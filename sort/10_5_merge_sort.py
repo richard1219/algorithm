@@ -18,6 +18,10 @@ import math
 
 #merge sort
 #在同一队列中进行移动，避免开辟新空间，类似插入排序
+#待归并队列
+#i, 队列下岩
+#m, 队列中位
+#n, 队列上岩
 def merge(array, i, m, n):
     x = i
     y = m + 1
@@ -39,6 +43,9 @@ def merge(array, i, m, n):
 
 #这种实现方式有概念上的意义但无实际意义，比较和移动次数并不少，递归还耗用栈空间
 #但这是一种很好的递归调用演示
+#array, 待排队列
+#i, 待排下岩
+#n, 待排上岩
 def merge_sort(array, i, n):
     if i == n: #递归退出条件
         return

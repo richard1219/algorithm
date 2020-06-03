@@ -27,7 +27,11 @@ def bubble_sort(array):
 
     return
 
+#快速排序是从树根选到树枝，构造出一颗排序树来；而树形选择排序是从树枝选到树根，构造一颗排序树；
 #quick sort partition
+#array, 待排队列
+#low, 排序下岩
+#high, 排序上岩
 def quick_sort_partition(array, low, high):
     pivot = low
     while high > low:
